@@ -1,0 +1,29 @@
+strategy:
+  type: copy
+  volume_ratio: 0.1
+  target:
+    driver: rubykube
+    market: 'ETHUSDT'
+    host: "https://exchange.coinerbox.com"
+    key: "d03ac73d39717529"
+    secret: "2f97a844c225c123306a4204ee0c748d"
+    rate_limit: 1
+  sources:
+    - driver: bitfaker
+      market: 'tETHUSD'
+      host: "api.bitfinex.com"
+      key: ""
+      secret: ""
+      rate_limit: 0.2
+    - driver: bitfinex
+      market: 'tETHUSD'
+      host: "api.bitfinex.com"
+      key: ""
+      secret: ""
+      rate_limit: 0.2
+    - driver: binance
+      market: 'ETHUSDT'
+      host: "api.binance.com"
+      key: "c3g7WCg7qptZ7KwMOiarZtcBfb8hBHGSKzPgWxVFYSYoTYCDKrHIxhHh0IYr95s5"
+      secret: "6xlJA8MUKV3madjlJBUrHnymnKmD98BphzdlFAFAuDbjicPq519KNOmR8gMBF3ja"
+      rate_limit: 0.2
